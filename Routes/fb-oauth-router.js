@@ -10,8 +10,8 @@ fboauthRouter.get("/",(req,res)=>{
     
 })
 fboauthRouter.get("/fboauthlogin",(req,res)=>{
-    res.sendFile(path.join(__dirname,"Frontend/index.html"))
-    
+  res.writeHead(301, { Location: "https://qr-code-chimp.netlify.app/loggedin" });
+  res.end(); 
 })
 
 fboauthRouter.get('/auth/facebook',
