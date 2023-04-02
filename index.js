@@ -34,16 +34,14 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.use(cors())
-
 app.use(cookieParser());
-app.get("/",(req,res)=>{
-  res.send("Server Home Page")
-})
 app.use(logger)
 
 
 // .........................................Route Setup.........................................
-
+app.get("/",(req,res)=>{
+    res.send("Server Home Page")
+})
 app.use("/user",userRouter)
 app.use("/oauth",oauthRouter)
 
